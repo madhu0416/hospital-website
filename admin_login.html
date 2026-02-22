@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="page">
+  <div class="overlay"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">+</div>
+      <div>
+        <h1>CityCare Hospital</h1>
+        <p>Admin Login</p>
+      </div>
+    </div>
+    <a class="btn" href="/">Home</a>
+  </header>
+
+  <main class="container">
+    <div class="panel">
+      <h2>Admin Login</h2>
+      <p class="muted">Enter admin credentials to view appointments.</p>
+
+      <form class="form" method="POST" action="/admin-login">
+        <div class="grid">
+          <div class="field full">
+            <label>Username</label>
+            <input name="username" type="text" placeholder="admin" required />
+          </div>
+
+          <div class="field full">
+            <label>Password</label>
+            <input name="password" type="password" placeholder="••••••••" required />
+          </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Login</button>
+      </form>
+
+      <div style="margin-top:12px;">
+        <p class="muted">Default: admin / admin123</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

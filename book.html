@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Appointment</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body class="page">
+  <div class="overlay"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">+</div>
+      <div>
+        <h1>CityCare Hospital</h1>
+        <p>Book Appointment</p>
+      </div>
+    </div>
+    <a class="btn" href="/">Home</a>
+  </header>
+
+  <main class="container">
+    <div class="panel">
+      <h2>Appointment Form</h2>
+      <p class="muted">Fill details and select doctor type, date and slot.</p>
+
+      <!-- For now action is /submit (we'll implement in Step 3) -->
+      <form class="form" method="POST" action="/submit">
+        <div class="grid">
+          <div class="field">
+            <label>Patient Name</label>
+            <input name="patient_name" type="text" placeholder="Enter full name" required />
+          </div>
+
+          <div class="field">
+            <label>Age</label>
+            <input name="age" type="number" min="0" max="120" placeholder="e.g. 22" required />
+          </div>
+
+          <div class="field">
+            <label>Gender</label>
+            <select name="gender" required>
+              <option value="">Select</option>
+              <option>Female</option>
+              <option>Male</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Contact Number</label>
+            <input name="phone" type="tel" placeholder="e.g. 9876543210" required />
+          </div>
+
+          <div class="field">
+            <label>Doctor Type</label>
+            <select name="doctor_type" required>
+              <option value="">Select</option>
+              <option>Dermatologist</option>
+              <option>Cardiologist</option>
+              <option>Dentist</option>
+              <option>Pediatrician</option>
+              <option>Orthopedic</option>
+              <option>ENT Specialist</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Date</label>
+            <input name="date" type="date" required />
+          </div>
+
+          <div class="field full">
+            <label>Available 30-min Slot</label>
+            <select name="slot" required>
+              <option value="">Select slot</option>
+              <option>09:00 - 09:30</option>
+              <option>09:30 - 10:00</option>
+              <option>10:00 - 10:30</option>
+              <option>10:30 - 11:00</option>
+              <option>11:00 - 11:30</option>
+              <option>11:30 - 12:00</option>
+              <option>14:00 - 14:30</option>
+              <option>14:30 - 15:00</option>
+              <option>15:00 - 15:30</option>
+              <option>15:30 - 16:00</option>
+              <option>16:00 - 16:30</option>
+              <option>16:30 - 17:00</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

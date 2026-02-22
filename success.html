@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Confirmed</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="page">
+  <div class="overlay"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">+</div>
+      <div>
+        <h1>CityCare Hospital</h1>
+        <p>Booking Confirmation</p>
+      </div>
+    </div>
+    <a class="btn" href="/">Home</a>
+  </header>
+
+  <main class="container">
+    <div class="panel">
+      <h2> Appointment Booked Successfully</h2>
+      <p class="muted">Please note your details below.</p>
+
+      <div class="card" style="background:gba(244, 242, 242, 0.1);">
+        <p><b>Patient:</b> {{patient_name}}</p>
+        <p><b>Age:</b> {{age}}</p>
+        <p><b>Gender:</b> {{gender}}</p>
+        <p><b>Phone:</b> {{phone}}</p>
+        <p><b>Doctor Type:</b> {{doctor_type}}</p>
+        <p><b>Date:</b> {{date}}</p>
+        <p><b>Slot:</b> {{slot}}</p>
+      </div>
+
+      <div style="margin-top:14px;">
+        <a class="btn btn-primary" href="/book">Book Another</a>
+        <a class="btn btn-ghost" href="/">Go Home</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

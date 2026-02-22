@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="page">
+  <div class="overlay"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">+</div>
+      <div>
+        <h1>CityCare Hospital</h1>
+        <p>Admin Dashboard</p>
+      </div>
+    </div>
+    <a class="btn" href="/">Home</a>
+  </header>
+
+  <main class="container">
+    <div class="panel">
+      <h2>All Appointments</h2>
+      <p class="muted">Total: {{total}}</p>
+
+      <div style="overflow:auto; border-radius:16px; border:1px solid rgba(255,255,255,.18);">
+        <table class="appt-table">
+          <thead>
+            <tr>
+              <th>Patient</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Phone</th>
+              <th>Doctor</th>
+              <th>Date</th>
+              <th>Slot</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{rows}}
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:14px;">
+        <a class="btn btn-primary" href="/book">Book Page</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
